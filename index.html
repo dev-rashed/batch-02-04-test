@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- slick slider, owl-carousel, bootstrap-carousel,  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="plugins/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/owlcarousel/assets/owl.theme.default.min.css">
+
+    <style>
+        .slick-slider img {
+            max-width: 100%;
+            min-height: 300px;
+        }
+    </style>
+
+</head>
+
+<body class="bg-secondary">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="slick-slider">
+                    <div class="border border-white"><img src="images/1.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/2.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/3.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/4.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/5.jpg" class="img-fluid" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel owl-theme">
+                    <div class="border border-white"><img src="images/1.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/2.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/3.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/4.jpg" class="img-fluid" alt=""></div>
+                    <div class="border border-white"><img src="images/5.jpg" class="img-fluid" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slick-slider').slick({
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 500,
+                // draggable: false,
+                // fade: true,
+                // focusOnSelect: true,
+                // infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+
+
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplaySpeed: 500,
+                autoplayTimeout: 300,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
